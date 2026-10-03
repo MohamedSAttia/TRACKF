@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Track Ford GRC</title>
+<meta name="description" content="منصّة تراكفورد المتكاملة للحوكمة والمخاطر والامتثال: أكاديمية GRCP، نظام تطبيق GRC، والمقيّم الذكي.">
+<link rel="icon" href="/assets/emb-light.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=Montserrat:wght@500;700;800&display=swap">
+<style>
+/* Layout: navy hero with the gold globe and trainer, then three module doors, then course strip — Track Ford flyer identity */
+:root{
+  --navy:#0A1B3D;--navy2:#13295A;--ink:#06122B;--gold:#C9973B;--gold2:#E2B85A;--cream:#FBF8F2;--surface:#FFFFFF;
+  --fg:#1B2436;--muted:#5B6476;--line:#E7DCC6;--chip:#F6EEDC;
+  --f-ar:"Rubik",system-ui,"Segoe UI",Tahoma,sans-serif;--f-en:"Montserrat","Rubik",system-ui,sans-serif;
+  --grad:linear-gradient(180deg,#F2D584,#D4A84C);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--cream:#0B1324;--surface:#111C33;--fg:#E8ECF4;--muted:#A3ADC2;--line:#26345A;--chip:#1A2746;color-scheme:dark}}
+:root[data-theme="dark"]{--cream:#0B1324;--surface:#111C33;--fg:#E8ECF4;--muted:#A3ADC2;--line:#26345A;--chip:#1A2746;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--cream);color:var(--fg);font-family:var(--f-ar);line-height:1.65;font-size:16px}
+img{max-width:100%}
+.en{font-family:var(--f-en);direction:ltr;unicode-bidi:isolate}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:16px}
+a{color:inherit}
+/* top */
+.top{background:var(--ink);border-bottom:2px solid var(--gold)}
+.top .wrap{display:flex;align-items:center;gap:14px;padding-block:10px;flex-wrap:wrap}
+.top img{height:40px}
+.top nav{margin-inline-start:auto;display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{color:#D9C9A4;text-decoration:none;padding:6px 12px;border-radius:999px;font-size:14px;border:1px solid transparent}
+.top nav a:hover{border-color:rgba(201,151,59,.5);color:#fff}
+.top nav a.on{background:var(--grad);color:var(--navy);font-weight:700}
+/* hero */
+.hero{background:radial-gradient(900px 500px at 15% 40%,#13295A 0%,var(--navy) 55%,var(--ink) 100%);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px;align-items:end;padding-block:40px 0}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero .art{max-width:420px;margin-inline:auto}}
+.kicker{font-family:var(--f-en);letter-spacing:.18em;font-size:12px;color:var(--gold2);text-transform:uppercase}
+.hero h1{font-size:clamp(30px,4.6vw,52px);line-height:1.15;margin:.3em 0 .2em;font-weight:800;text-wrap:balance}
+.hero h1 b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#D6DCE8;max-width:58ch;font-size:17px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-block:22px 40px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 20px;font-weight:700;text-decoration:none;border:1.5px solid var(--gold);font-size:15px}
+.btn.gold{background:var(--grad);color:var(--navy);border-color:#B8862E}
+.btn.ghost{color:#fff}
+.btn:focus-visible,.door:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.art{position:relative;aspect-ratio:1/1.05;max-width:100%}
+.art .globe{position:absolute;inset:4% 0 auto auto;width:92%;opacity:.95}
+.art .ring{position:absolute;inset:0;border-radius:50%;border:3px solid rgba(226,184,90,.75);box-shadow:0 0 30px rgba(226,184,90,.35);width:96%;aspect-ratio:1;inset-inline-start:2%;top:6%}
+.art .man{position:absolute;bottom:0;inset-inline-start:10%;width:76%}
+.art .badge{position:absolute;bottom:18px;inset-inline-end:0;background:var(--navy);border:2px solid var(--gold);border-radius:999px;padding:8px 16px;font-weight:800;font-size:15px}
+.art .badge small{display:block;font-family:var(--f-en);font-weight:500;color:var(--gold2);font-size:11px}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;margin-top:-28px;position:relative;box-shadow:0 14px 40px -18px rgba(10,27,61,.35)}
+.stats div{padding:16px;text-align:center;border-inline-start:1px solid var(--line)}
+.stats div:first-child{border-inline-start:0}
+.stats b{display:block;font-family:var(--f-en);font-size:30px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
+.stats span{color:var(--muted);font-size:14px}
+/* modules */
+section{padding-block:48px 8px}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.sh h2{margin:0;font-size:28px;font-weight:800;text-wrap:balance}
+.sh h2 i{display:inline-block;width:.4em;height:.78em;background:var(--grad);margin-inline-end:.35em;vertical-align:-.06em}
+.sh p{margin:0;color:var(--muted)}
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.door{display:grid;grid-template-rows:auto auto 1fr auto;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none;color:var(--fg);position:relative;transition:transform .2s,box-shadow .2s;min-width:0}
+.door:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(10,27,61,.45)}
+.door .n{position:absolute;inset-inline-end:18px;top:16px;font-family:var(--f-en);font-weight:800;font-size:13px;color:var(--gold)}
+.door .ic{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--navy);border:2px solid var(--gold)}
+.door .ic svg{width:28px;height:28px;stroke:var(--gold2);fill:none;stroke-width:1.8}
+.door h3{margin:0;font-size:21px;font-weight:800}
+.door h3 small{display:block;font-family:var(--f-en);font-weight:600;font-size:12px;color:#8A6A2C;margin-top:2px}
+.door ul{margin:0;padding-inline-start:18px;color:var(--fg)}
+.door li{margin-block:4px}
+.door .go{justify-self:start;background:var(--navy);color:#fff;border:1.5px solid var(--gold);border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px}
+.door.hero2{background:var(--navy);color:#fff;border-color:var(--gold)}
+.door.hero2 h3 small{color:var(--gold2)}.door.hero2 ul{color:#D6DCE8}
+.door.hero2 .go{background:var(--grad);color:var(--navy)}
+/* journey */
+.journey{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:0}
+.step b{color:var(--gold);font-family:var(--f-en)}
+.step h4{margin:4px 0 2px;font-size:16px}
+.step p{margin:0;color:var(--muted);font-size:14px}
+/* course */
+.course{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center;background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:22px;padding:24px;margin-block:48px}
+@media (max-width:700px){.course{grid-template-columns:1fr}}
+.course h2{margin:0 0 6px;font-size:26px}
+.course p{margin:0;color:#D6DCE8}
+.course .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.course .meta span{background:rgba(255,255,255,.08);border:1px solid rgba(226,184,90,.45);border-radius:999px;padding:5px 12px;font-size:14px}
+.qr{background:#fff;border-radius:14px;padding:10px;text-align:center;color:var(--navy);font-size:13px;font-weight:700;width:180px;justify-self:center}
+.qr img{display:block;width:160px;height:160px}
+footer{background:var(--ink);border-top:2px solid var(--gold);color:#AEB7C8;font-size:13px}
+footer .wrap{padding-block:18px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+footer b{color:var(--gold2)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <a href="/"><img src="/assets/lock-dark.png" alt="Track Ford — Business Consulting and International Learning"></a>
+  <nav aria-label="وحدات المنصة"><a class="on" href="/">الرئيسية</a><a href="/academy">أكاديمية GRCP</a><a href="/system">نظام تطبيق GRC</a><a href="/navigator">المقيّم الذكي</a></nav>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Track Ford International · GRC Capability Model 3.5</div>
+      <h1>تراكفورد <b>GRC</b></h1><div style="color:#E2B85A;font-weight:700;font-size:18px">تحت إشراف شركة تراكفورد العالمية</div>
+      <p>من التحضير لشهادة GRCP، إلى بناء منظومة الحوكمة وإدارة المخاطر والامتثال داخل مؤسستك، إلى تقييم القدرات والخسائر بتوصيات مدعومة بالذكاء الاصطناعي — في منصّة واحدة بالعربية والإنجليزية.</p>
+      <div class="cta">
+        <a class="btn gold" href="/academy">ابدأ التحضير لشهادة GRCP</a>
+        <a class="btn ghost" href="/navigator">قيّم مؤسستك الآن</a>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="ring"></div>
+      <img class="globe" src="/assets/globe.png" alt="">
+      <img class="man" src="/assets/trainer.png" alt="">
+      <div class="badge">د. محمد عطية<small>Dr. Mohamed Attia</small></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div><b>300</b><span>سؤال محاكاة بشرح</span></div>
+    <div><b>10</b><span>محاضرات تفصيلية</span></div>
+    <div><b>20</b><span>عنصرًا في النموذج</span></div>
+    <div><b>4</b><span>مكوّنات بأدواتها</span></div>
+    <div><b>AI</b><span>مساعد ومستشار ذكي</span></div>
+  </div>
+
+  <section>
+    <div class="sh"><h2><i></i>وحدات المنصّة</h2><p>ثلاث وحدات مترابطة — اختر من أين تبدأ</p></div>
+    <div class="doors">
+      <a class="door" href="/academy">
+        <span class="n">01</span>
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
+        <h3>أكاديمية GRCP<small>GRCP Academy — exam preparation</small></h3>
+        <ul><li>عشر محاضرات مبنية على نموذج القدرات 3.5</li><li>خطة دراسة يومية قابلة للتتبّع</li><li>بنك 300 سؤال وثلاثة اختبارات وفق مخطط OCEG</li><li>قاموس ثنائي اللغة ومساعد ذكي داخلي</li></ul>
+        <span class="go">ادخل الأكاديمية</span>
+      </a>
+      <a class="door hero2" href="/system">
+        <span class="n">02</span>
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M2 10l10-6 10 6"/></svg></span>
+        <h3>نظام تطبيق GRC<small>GRC Implementation System</small></h3>
+        <ul><li>ملف المؤسسة وتقييم مبدئي ومستشار ذكي</li><li>الدراسة ← المواءمة ← التنفيذ ← المراجعة بأدواتها وسجلاتها</li><li>دراسة الجدوى وخطة التطبيق ولوحة المؤشرات</li><li>تقرير شامل وإفادة تطبيق، وستة اختبارات</li></ul>
+        <span class="go">ابنِ منظومة مؤسستك</span>
+      </a>
+      <a class="door" href="/navigator">
+        <span class="n">03</span>
+        <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/><path d="M8 3.5l1 2M16 3.5l-1 2"/></svg></span>
+        <h3>المقيّم الذكي<small>AI GRC Navigator</small></h3>
+        <ul><li>استبيان قدرات من 20 سؤالًا</li><li>تقييم قيمة الخسائر والوفر المحتمل</li><li>مؤشر قدرات GRC ومخطط المكوّنات والفجوات</li><li>تقييم وتوصيات وخارطة طريق بالذكاء الاصطناعي</li></ul>
+        <span class="go">قيّم مؤسستك</span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh"><h2><i></i>المسار المقترح</h2><p>كيف تتكامل الوحدات الثلاث</p></div>
+    <div class="journey">
+      <div class="step"><b>1</b><h4>قيّم</h4><p>ابدأ بالمقيّم الذكي لمعرفة مستوى نضج مؤسستك وحجم الخسائر.</p></div>
+      <div class="step"><b>2</b><h4>تعلّم</h4><p>تأهّل لشهادة GRCP عبر المحاضرات وخطة الدراسة ومحاكي الاختبار.</p></div>
+      <div class="step"><b>3</b><h4>طبّق</h4><p>ابنِ المنظومة خطوة بخطوة في نظام التطبيق على عناصر النموذج العشرين.</p></div>
+      <div class="step"><b>4</b><h4>راجِع وحسّن</h4><p>أعد التقييم وتابع المؤشرات حتى تبلغ المستوى المستهدف.</p></div>
+    </div>
+  </section>
+
+  <div class="course">
+    <div>
+      <div class="kicker">GRCP™ Course · Track Ford</div>
+      <h2>الدورة التدريبية لشهادة GRCP</h2>
+      <p>تبدأ الأحد 11 أكتوبر 2026 مع د. محمد عطية — ورش عمل، وحالات عملية، وأمثلة تطبيقية، وفيديوهات مدعومة بالذكاء الاصطناعي، ونظام GRC. والشهادة مدعومة من صندوق تنمية الموارد البشرية «هدف».</p>
+      <div class="meta"><span>تبدأ 11 أكتوبر 2026</span><span>بالعربية والإنجليزية</span><span>مدعومة من «هدف»</span></div>
+      <div class="cta" style="margin-block:16px 0"><a class="btn gold" target="_blank" rel="noopener" href="https://trackford.sa/class-details/%D8%A7%D9%84%D8%AA%D8%A7%D9%87%D9%8A%D9%84-%D9%84%D8%B4%D9%87%D8%A7%D8%AF%D8%A9-%D9%85%D8%AD%D8%AA%D8%B1%D9%81-%D8%A7%D9%84%D8%AD%D9%88%D9%83%D9%85%D8%A9-%D9%88%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D8%B7%D8%B1-%D9%88%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AB%D8%A7%D9%84-GRCP">سجّل في الدورة</a></div>
+    </div>
+    <div class="qr"><img src="/assets/qr.png" alt="رمز QR لصفحة التسجيل في الدورة">امسح للتسجيل</div>
+  </div>
+</main>
+
+<footer><div class="wrap">
+  <span>تصميم وإعداد وبرمجة: د. محمد عطية · <b>تحت إشراف شركة تراكفورد العالمية</b> · <span class="en">trackford.sa · info@trackford.com</span></span>
+  <span class="en">KSA +966 54 503 3227 · UAE +971 56 564 0817 · EGY +20 102 261 5150</span>
+  <span>جميع حقوق الملكية الفكرية محفوظة لمحمد عطية — يُمنع النشر أو الانتساب أو الاستخدام التجاري</span>
+</div></footer>
+</body>
+</html>
